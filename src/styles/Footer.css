@@ -1,0 +1,119 @@
+.site-footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  padding: 35px 0 20px;
+  position: relative;
+  border-top: 4px solid #ff4500;
+  background-color: #080808;
+  box-shadow: 0 -4px 30px rgba(255, 69, 0, 0.2);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 4px;
+  background: linear-gradient(to right, #ff4500, #ff8c00, #ff4500);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+}
+
+.footer-container,
+.footer-bottom {
+  width: min(100% - 40px, 1200px);
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.footer-column h2 {
+  margin: 0 0 16px;
+  color: #ff8c00;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+
+.footer-column p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.footer-navigation {
+  text-align: center;
+}
+
+.footer-contact {
+  text-align: right;
+}
+
+.footer-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  display: inline-block;
+  color: #aaa;
+  font-size: 0.88rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-column a:hover {
+  transform: translateY(-2px);
+  color: #ff8c00;
+  text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom hr {
+  height: 1px;
+  margin: 30px 0 20px;
+  border: 0;
+  background-color: #ff4500;
+  opacity: 0.15;
+}
+
+.footer-bottom small {
+  color: #555;
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+}

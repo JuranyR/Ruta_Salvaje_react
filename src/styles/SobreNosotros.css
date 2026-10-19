@@ -1,0 +1,286 @@
+.main-content:has(.sobre-nosotros-page) {
+  max-width: none;
+  margin: 0;
+  padding: 87px 0 0;
+  background: #0a0a0a;
+}
+
+.sobre-nosotros-page {
+  overflow: hidden;
+  background: #0a0a0a;
+  color: #f0f0f0;
+  font-family: Montserrat, sans-serif;
+}
+
+.sobre-hero {
+  position: relative;
+  display: flex;
+  min-height: 520px;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 4px solid #ff4500;
+}
+
+.sobre-hero-img {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.45) saturate(1.2);
+}
+
+.sobre-hero-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 55%, transparent 100%);
+}
+
+.sobre-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 5rem 2rem 5rem 5vw;
+}
+
+.sobre-hero-eyebrow {
+  margin: 0 0 1rem;
+  color: #ff4500;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+  text-transform: uppercase;
+}
+
+.sobre-hero-titulo {
+  margin: 0 0 1.2rem;
+  color: #ff8c00;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1.05;
+  text-shadow: 0 0 30px rgba(255, 69, 0, 0.4), 0 4px 20px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
+
+.sobre-hero-divider {
+  width: 60px;
+  height: 3px;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+  background: linear-gradient(to right, #ff4500, #ff8c00);
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+}
+
+.sobre-hero-texto {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.sobre-content {
+  width: min(100% - 40px, 1140px);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.sobre-section-title {
+  margin: 1rem 0 2rem;
+  color: #ff8c00;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(255, 140, 0, 0.25);
+  text-transform: uppercase;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+.equipo-card {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 69, 0, 0.2);
+  border-radius: 15px;
+  background: #141414;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.equipo-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255, 69, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(255, 69, 0, 0.25), 0 0 0 1px rgba(255, 69, 0, 0.4);
+}
+
+.equipo-card-image {
+  display: block;
+  width: 75%;
+  height: 250px;
+  margin: 1rem auto 0;
+  object-fit: contain;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.equipo-card:hover .equipo-card-image {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.4)) brightness(1.1);
+}
+
+.equipo-card-body {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.equipo-card-body h3 {
+  margin: 0 0 0.6rem;
+  color: #f0f0f0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.equipo-badge {
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #ff8c00;
+  border-radius: 999px;
+  background: rgba(255, 140, 0, 0.1);
+  color: #ff8c00;
+  font-size: 0.68rem;
+  line-height: 1.2;
+}
+
+.equipo-card-body p {
+  flex: 1;
+  margin: 0 0 1rem;
+  color: #fff;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.equipo-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #ff8c00;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.equipo-linkedin:hover {
+  color: #ff4500;
+  text-shadow: 0 0 8px rgba(255, 69, 0, 0.5);
+}
+
+.mision-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.mision-vision-card {
+  height: 100%;
+  padding: 2rem;
+  border: 1px solid rgba(255, 69, 0, 0.2);
+  border-radius: 4px;
+  background: #141414;
+  text-align: center;
+}
+
+.mision-vision-icon {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.mision-vision-card h2 {
+  margin: 0 0 1rem;
+  color: #ff8c00;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.mision-vision-card p {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .main-content:has(.sobre-nosotros-page) {
+    padding: 87px 0 0;
+  }
+
+  .sobre-hero {
+    min-height: 480px;
+  }
+
+  .sobre-hero-content {
+    padding: 4rem 1.5rem;
+  }
+
+  .sobre-hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+  }
+
+  .sobre-content {
+    width: min(100% - 32px, 1140px);
+  }
+
+  .equipo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .sobre-hero {
+    min-height: 540px;
+  }
+
+  .sobre-hero-content {
+    padding: 3rem 1.2rem;
+  }
+
+  .sobre-hero-texto {
+    font-size: 0.9rem;
+  }
+
+  .equipo-grid,
+  .mision-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .equipo-card-image {
+    height: 230px;
+  }
+}

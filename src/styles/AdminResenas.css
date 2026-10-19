@@ -1,0 +1,78 @@
+.admin-resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 18px;
+}
+
+.admin-resena-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 140, 0, 0.14);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #151515, #101010);
+}
+
+.admin-resena-card header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-resena-card h2 {
+  margin: 0;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+.admin-resena-card header span {
+  color: #ff9d00;
+  white-space: nowrap;
+}
+
+.admin-resena-meta {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.78rem;
+}
+
+.admin-resena-comment {
+  flex: 1;
+  margin: 0;
+  color: #eee;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.admin-resena-card button,
+.admin-contacto-card button,
+.admin-plan-card button {
+  align-self: flex-start;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 69, 0, 0.45);
+  border-radius: 4px;
+  background: transparent;
+  color: #ff8c00;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.admin-resena-card button:hover:not(:disabled),
+.admin-contacto-card button:hover:not(:disabled),
+.admin-plan-card button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff4500, #ff8c00);
+  color: white;
+}
+
+.admin-resena-card button:disabled,
+.admin-contacto-card button:disabled,
+.admin-plan-card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
