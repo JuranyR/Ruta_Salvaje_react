@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruta Salvaje</title>
+    <script>
+      const base = '/Ruta_Salvaje_react/'
+      const destination = window.location.pathname + window.location.search + window.location.hash
+      window.location.replace(`${base}?__ghpages=${encodeURIComponent(destination)}`)
+    </script>
+  </head>
+  <body></body>
+</html>
