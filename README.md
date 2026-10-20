@@ -72,7 +72,12 @@ Las rutas de administración requieren una sesión con rol `ADMIN`.
 ```bash
 npm run dev      
 npm run build   
+npm run deploy
 ```
+
+## Publicación en GitHub Pages
+
+El proyecto está configurado para publicarse en `https://juranyr.github.io/Ruta_Salvaje_react/`. Vite genera recursos con la base `/Ruta_Salvaje_react/`, React Router usa la misma base y `public/404.html` recupera rutas internas al abrirlas directamente o recargar la página. `npm run deploy` compila el proyecto y publica el contenido de `dist/` en la rama `gh-pages`. En **Settings → Pages**, selecciona esa rama y la carpeta raíz como fuente. La URL del sitio no debe incluir `/dist`.
 
 ## Estructura del proyecto
 
